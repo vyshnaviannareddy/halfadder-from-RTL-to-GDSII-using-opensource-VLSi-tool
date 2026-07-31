@@ -4,9 +4,9 @@
 ### A Silicon Journey: From Behavioral Verilog to Sky130 Manufacturing-Ready Layout  
 
 [![OpenLane](https://img.shields.io/badge/OpenLane-Automated%20Flow-blue.svg)](https://github.com/The-OpenROAD-Project/OpenLane)
-[![PDK](https://img.shields.io/badge/PDK-Sky130-red.svg)](https://github.com/google/skywater-pdk)  
-[![Language](https://img.shields.io/badge/Language-Verilog-blueviolet.svg)](#)  
-[![Status](https://img.shields.io/badge/Status-DRC%20%26%20LVS%20Clean-success.svg)](#)  
+[![PDK](https://img.shields.io/badge/PDK-Sky130-red.svg)](https://github.com/google/skywater-pdk) 
+[![Language](https://img.shields.io/badge/Language-Verilog-blueviolet.svg)](#) 
+[![Status](https://img.shields.io/badge/Status-DRC%20%26%20LVS%20Clean-success.svg)](#) 
 
 *Documenting the complete physical design realization of a 1-bit Half Adder using the open-source OpenLane toolchain and SkyWater 130nm standard cell library.*  
 
