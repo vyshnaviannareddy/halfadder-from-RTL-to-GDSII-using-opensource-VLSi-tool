@@ -126,5 +126,47 @@ The resulting GDSII layout was exported and verified using KLayout and Magic for
 │   ├── halfadder.vcd     # Waveform dump file  
 │   └── halfadder.vvp     # Compiled Icarus Verilog binary  
 ├── config.json           # OpenLane floorplan constraints and design configurations  
-├── halfadder.gds         # Exported binary stream format for foundry fabrication  
-└── README.md             # Documentation
+├── halfadder.gds         # Exported binary stream format for foundry fabrication
+```
+## 🚀 How to Reproduce
+
+Rebuild this physical layout blueprint on your local environment:
+
+### Prerequisites:
+1. Linux OS (Ubuntu 20.04/22.04 recommended)
+2. Docker engine installed and configured
+3. OpenLane workspace clone with configured Sky130 PDK
+
+---
+
+### Step 1: Execute Functional Verification
+
+Compile and simulate the behavioral netlist:
+
+```
+# Compile design and testbench modules
+iverilog -o src/halfadder.vvp src/halfadder.v src/halfaddertb.v
+
+# Execute simulation runtime to output VCD dump
+vvp src/halfadder.vvp
+
+# Open wave structures visually
+gtkwave halfadder.vcd
+```
+### Step 2: Run the Physical Design Pipeline
+
+Move this design directory inside your native OpenLane installation route under `<OpenLane_Root>/designs/`.
+
+1. Mount the interactive OpenLane environment container:
+```
+make mount
+```
+1. Run the automated layout generation script:
+   ```
+./flow.tcl -design halfadder
+```
+## 🤝 Acknowledgments
+
+1. **Google / SkyWater Foundation:** For open-sourcing the Sky130nm PDK.
+2. **The OpenROAD Project:** For developing open-source automated EDA placement and routing tools.
+3. **OpenLane:** For providing the automated end-to-end RTL-to-GDSII flow scriptable architecture.
