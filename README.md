@@ -162,7 +162,7 @@ Move this design directory inside your native OpenLane installation route under 
 make mount
 ```
 1. Run the automated layout generation script:
-   ```
+```
 ./flow.tcl -design halfadder
 ```
 ## 🤝 Acknowledgments
